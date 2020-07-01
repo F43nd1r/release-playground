@@ -21,7 +21,7 @@ compileTestKotlin.kotlinOptions {
 
 tasks.register("fakePublish") {
     doLast {
-        file("published.txt").writeText("Publish task was called")
+        file("$buildDir/published.txt").writeText("Publish task was called for version ${project.version}")
     }
 }
 
