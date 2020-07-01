@@ -22,7 +22,6 @@ compileTestKotlin.kotlinOptions {
 tasks.register("fakePublish") {
     doLast {
         file("$buildDir/published.txt").writeText("Publish task was called for version ${project.version}")
-        throw GradleException("This task has failed")
     }
 }
 
