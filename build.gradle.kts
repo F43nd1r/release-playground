@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.72"
-    id("com.faendir.gradle.release") version "0.1"
+    id("com.faendir.gradle.release") version "3.1.0"
 }
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
