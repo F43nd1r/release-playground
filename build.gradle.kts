@@ -26,3 +26,11 @@ tasks.register("fakePublish") {
 }
 
 tasks["afterReleaseBuild"].dependsOn(tasks["fakePublish"])
+
+
+tasks.register("GetNewVersion") {
+    doLast {
+        println("New version is ${project.version}")
+    }
+}
+tasks["updateVersion"].finalizedBy("GetNewVersion")
