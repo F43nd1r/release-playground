@@ -19,6 +19,10 @@ compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
 
+release {
+    failOnSnapshotDependencies = false
+}
+
 tasks.register("fakePublish") {
     doLast {
         file("$buildDir/published.txt").writeText("Publish task was called for version ${project.version}")
